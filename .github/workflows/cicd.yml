@@ -19,4 +19,9 @@ jobs:
       # - run: npm ci
       - run: cd Github-Actions-CI-CD
       - run: npm run build
+      - run: cd ..
+      - run: nm2 stop 0
+      - run: nm2 start 0
+      - run: nm2 save
+      - run: sudo service nginx restart
 
